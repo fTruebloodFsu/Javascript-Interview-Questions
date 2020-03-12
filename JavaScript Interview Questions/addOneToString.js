@@ -71,7 +71,13 @@ function fixAllZero(arr){
 }
 
 
+function isString(str){
+  return typeof(str) === 'string';
+}
+
 function addOne(str){
+  
+  if(!isString(str)) return undefined;
   
   const arr = str2Arr(str);
   const arrInts = turnArr2Ints(arr);
@@ -88,3 +94,4 @@ console.log("Testing addOne: ", addOne('3222444555'));
 console.log("Testing addOne: ", addOne('10456789123999'));
 console.log("Testing addOne: ", addOne('999999'));
 console.log("Testing addOne: ", addOne('9'));
+console.log("Testing addOne: ", addOne(456));
